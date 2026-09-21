@@ -31,10 +31,12 @@ function refPath(value) {
 
 export function adapt({ json, files }) {
   const greyPath = (n) => `color.grey.${n}`;
-  const steps = Object.entries(json.color.grey).map(([n, v]) =>
+  // JavaScript orders integer-like keys first, so sort the ramps numerically.
+  const numeric = (entries) => entries.filter(([k]) => k !== 'comment').sort((a, b) => Number(a[0]) - Number(b[0]));
+  const steps = numeric(Object.entries(json.color.grey)).map(([n, v]) =>
     fromFile(FILE, greyPath(n), v.hex, `grey.${n}`, `Grey ${n}`));
   const grey = (n) => steps.find((s) => s.id === `grey.${n}`);
-  const accentSteps = Object.entries(json.color.accent).filter(([k]) => k !== 'comment').map(([n, v]) =>
+  const accentSteps = numeric(Object.entries(json.color.accent)).map(([n, v]) =>
     fromFile(FILE, `color.accent.${n}`, v.hex, `accent.${n}`, `Accent ${n}`));
   const accentStep = (n) => accentSteps.find((s) => s.id === `accent.${n}`);
 

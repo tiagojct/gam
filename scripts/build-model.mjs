@@ -55,4 +55,15 @@ const model = {
   families,
 };
 writeFileSync(join(generated, 'model.json'), JSON.stringify(model, null, 1) + '\n');
+// A small summary for the site chrome script, so reading pages do not
+// carry the whole model.
+const meta = {
+  site: model.site,
+  order: model.order,
+  families: Object.fromEntries(model.order.map((id) => [id, {
+    name: families[id].name,
+    bg: { dark: families[id].modes.dark.roles.bg.hex, light: families[id].modes.light.roles.bg.hex },
+  }])),
+};
+writeFileSync(join(generated, 'meta.json'), JSON.stringify(meta) + '\n');
 console.log(`model: ${Object.keys(families).join(', ')} -> src/generated/model.json`);
