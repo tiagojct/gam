@@ -10,3 +10,4 @@ public/favicon.png
 public/apple-touch-icon.png
 .DS_Store
 *.log
+.claude/
