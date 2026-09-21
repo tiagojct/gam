@@ -48,7 +48,8 @@ export function adapt({ json, files }) {
     if (!/^#/.test(hex)) return null; // alpha overlays are not flat colours
     const base = path && path.startsWith('color.grey.') ? grey(path.split('.').pop())
       : path && path.startsWith('color.accent.') ? accentStep(path.split('.').pop()) : null;
-    return base ? alias(base, `${m}.${id}`, `${m} ${id}`) : fromFile(FILE, `theme.${m}.${key}`, hex, `${m}.${id}`, `${m} ${id}`);
+    const label = `${m.charAt(0).toUpperCase() + m.slice(1)} ${id}`;
+    return base ? alias(base, `${m}.${id}`, label) : fromFile(FILE, `theme.${m}.${key}`, hex, `${m}.${id}`, label);
   };
 
   const sweep = (m) => Object.entries(json.data[`sequence-on-${m}`]).map(([n, v]) =>
