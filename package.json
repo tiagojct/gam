@@ -14,7 +14,7 @@
     "predev": "npm run model && npm run render",
     "dev": "vite",
     "preview": "vite preview",
-    "pretest": "npm run model",
+    "pretest": "npm run model && npm run render",
     "test": "vitest run"
   },
   "author": "Tiago Jacinto",
