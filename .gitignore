@@ -1,0 +1,9 @@
+node_modules/
+dist/
+site/
+vendor/
+src/generated/
+public/official/
+public/og.png
+.DS_Store
+*.log
