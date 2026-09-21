@@ -1,0 +1,33 @@
+# Glauca (Pruina) — Ghostty theme (light). Generated from glauca.json.
+# Colour only; needs Ghostty >= 1.3 for the search-* keys.
+background = #f0f4f6
+foreground = #16222a
+cursor-color = #0b62cf
+cursor-text = #f2f7fb
+selection-background = #35576b
+selection-foreground = #f2f7fb
+search-foreground = #16222a
+search-background = #b7cdd6
+search-selected-foreground = #f2f7fb
+search-selected-background = #0b62cf
+split-divider-color = #cdd7dc
+unfocused-split-fill = #f0f4f6
+# GTK only, and only under `window-theme = ghostty`; ignored elsewhere.
+window-titlebar-background = #f7fafb
+window-titlebar-foreground = #16222a
+palette = 0=#0b1218
+palette = 1=#a55859
+palette = 2=#3f7b39
+palette = 3=#846c36
+palette = 4=#4070a8
+palette = 5=#786594
+palette = 6=#357884
+palette = 7=#3e4d55
+palette = 8=#55646d
+palette = 9=#b06061
+palette = 10=#47833c
+palette = 11=#87733d
+palette = 12=#0273ee
+palette = 13=#8669a9
+palette = 14=#517d86
+palette = 15=#16222a

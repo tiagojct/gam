@@ -1,0 +1,33 @@
+# Glauca (Profundum) — Ghostty theme. Generated from glauca.json.
+# Colour only; needs Ghostty >= 1.3 for the search-* keys.
+background = #10161c
+foreground = #e8eef2
+cursor-color = #007aff
+cursor-text = #0b1218
+selection-background = #2b4356
+selection-foreground = #e8eef2
+search-foreground = #0d1720
+search-background = #93b7c9
+search-selected-foreground = #0b1218
+search-selected-background = #3d97ff
+split-divider-color = #2a3540
+unfocused-split-fill = #10161c
+# GTK only, and only under `window-theme = ghostty`; ignored elsewhere.
+window-titlebar-background = #171f26
+window-titlebar-foreground = #e8eef2
+palette = 0=#171f26
+palette = 1=#b85f5f
+palette = 2=#4f9e3f
+palette = 3=#c79a3d
+palette = 4=#4981c4
+palette = 5=#8e74ab
+palette = 6=#3f93a0
+palette = 7=#c6ced4
+palette = 8=#3a4754
+palette = 9=#c96a6a
+palette = 10=#62ba46
+palette = 11=#d9ae4a
+palette = 12=#007aff
+palette = 13=#b184db
+palette = 14=#7fc4cf
+palette = 15=#e8eef2

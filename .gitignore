@@ -1,7 +1,7 @@
 node_modules/
-dist/
-site/
-vendor/
+/dist/
+/site/
+/vendor/
 src/generated/
 public/official/
 public/og.png
