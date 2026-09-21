@@ -223,7 +223,7 @@ main { flex: 1; padding-block: 2rem 3rem; }
 .site-footer p { max-width: none; margin-bottom: 0.4rem; }
 
 /* Cards */
-.cards { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); margin: 1.5rem 0; padding: 0; list-style: none; max-width: none; }
+.cards { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 1.5rem 0; padding: 0; list-style: none; max-width: none; }
 .card {
   min-width: 0;
   border: 1px solid var(--border);
@@ -242,10 +242,11 @@ main { flex: 1; padding-block: 2rem 3rem; }
 /* Swatches */
 .strip { display: flex; height: 1.6rem; border-radius: 3px; overflow: hidden; border: 1px solid var(--border); }
 .strip span { flex: 1; background: var(--sw); }
-.strip.dots { border: 0; height: auto; gap: 0.35rem; overflow: visible; }
-.strip.dots span { flex: 0 0 auto; width: 1.25rem; height: 1.25rem; border-radius: 50%; border: 1px solid var(--border); }
-.mode-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-.mode-pair > div { padding: 0.6rem; border-radius: var(--radius); background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+.strip.dots { border: 0; height: auto; gap: 0.3rem; overflow: visible; flex-wrap: wrap; }
+.strip.dots span { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; border-radius: 50%; border: 1px solid var(--border); }
+.mode-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+.mode-pair > div {
+  min-width: 0; padding: 0.6rem; border-radius: var(--radius); background: var(--bg); color: var(--text); border: 1px solid var(--border); }
 .mode-pair .mode-name { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem; }
 
 .swatches { display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); list-style: none; padding: 0; margin: 1rem 0; max-width: none; }
@@ -376,6 +377,10 @@ noscript .callout { max-width: none; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+@media (max-width: 48rem) {
+  .cards { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 40rem) {
