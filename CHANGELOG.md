@@ -21,6 +21,7 @@ First release.
   protan, deutan and tritan simulation.
 - Site chrome restyles in any family and mode; the choice is remembered
   in localStorage and the pages render without it or without JavaScript.
-- Open Graph image, favicons and theme-color generated from the tokens.
+- Open Graph image, favicons and the browser theme colour generated from
+  the tokens.
 - nginx image, GitHub Actions workflow with repository_dispatch and a
   weekly schedule, deployment notes for the VPS.
