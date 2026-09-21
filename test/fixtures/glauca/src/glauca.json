@@ -1,0 +1,672 @@
+{
+  "name": "Glauca",
+  "version": "0.1.0",
+  "description": "A design system named for the glaucous bloom: the blue-grey-green film on leaves, waves and eyes. A pale frost field is the ground; one vivid sky-blue (dies) is the load-bearing mark. Light-first: Pruina (light) leads, Profundum (dark) answers. Ships as web/CSS, Tailwind, Typst slides and posters, an Obsidian theme, Ghostty/iTerm2 presets, an oh-my-zsh prompt, VS Code and Zed themes, Firefox/Thunderbird/Vivaldi browser themes, a Zotero theme, and R/Python plot styles.",
+  "signature": "Nothing hides behind the surface. The bloom carries the substance -- pale, even, legible -- and the sky-blue dies is the one rare mark, kept rare so a page never shouts. The working exception is the code tier, where legibility duty puts the blue on keywords and admits the leaf green. See FOUNDATIONS.md.",
+  "tiers": {
+    "core": "Identity hues used everywhere: saxum (dark neutrals), glaucum (the bloom tints), caelum (the blue mark), pruina (pale neutrals). These define the brand.",
+    "extended": "Working hues added only for code (editors, terminal ANSI): folium (the leaf-green anchor), bacca (red), viola (violet), lacus (blue), unda (cyan). They never appear on posters, slides, or the web. Dataviz stays brand-free by design (Okabe-Ito categorical, dies-blue sequential)."
+  },
+  "modes": {
+    "dark": {
+      "label": "Profundum",
+      "scheme": "dark",
+      "bg": "#10161c",
+      "surface": "#171f26",
+      "surface-raised": "#1f2932",
+      "text": "#e8eef2",
+      "text-muted": "#8c8c8c",
+      "border": "#2a3540",
+      "accent": "#3d97ff",
+      "accent-bright": "#6cb2ff",
+      "accent-deep": "#007aff",
+      "on-accent": "#0b1218",
+      "tint-deep": "#142430",
+      "tint": "#2b4356",
+      "tint-bright": "#4d7391",
+      "tint-pale": "#93b7c9",
+      "on-tint": "#0d1720"
+    },
+    "light": {
+      "label": "Pruina",
+      "scheme": "light",
+      "bg": "#f0f4f6",
+      "surface": "#f7fafb",
+      "surface-raised": "#ffffff",
+      "text": "#16222a",
+      "text-muted": "#55646d",
+      "border": "#cdd7dc",
+      "accent": "#0b62cf",
+      "accent-bright": "#007aff",
+      "accent-deep": "#084b96",
+      "on-accent": "#f2f7fb",
+      "tint-deep": "#16303f",
+      "tint": "#35576b",
+      "tint-bright": "#3e6d84",
+      "tint-pale": "#b7cdd6",
+      "on-tint": "#f2f7fb"
+    }
+  },
+  "palette": {
+    "saxum": {
+      "pix": "#10161c",
+      "umbra": "#171f26",
+      "petra": "#1f2932",
+      "ferrum": "#0b1218"
+    },
+    "glaucum": {
+      "caligo": "#142430",
+      "vadum": "#2b4356",
+      "spuma": "#4d7391",
+      "nebula": "#93b7c9"
+    },
+    "caelum": {
+      "dies": "#007aff",
+      "aer": "#6cb2ff",
+      "imum": "#084b96"
+    },
+    "pruina": {
+      "pruina": "#e8eef2",
+      "charta": "#f0f4f6",
+      "cinis": "#8c8c8c"
+    },
+    "extended": {
+      "folium": "#62ba46",
+      "bacca": "#c96a6a",
+      "viola": "#b184db",
+      "lacus": "#4a9edb",
+      "unda": "#45a3ad"
+    }
+  },
+  "code": {
+    "comment": {
+      "color": "#8c8c8c",
+      "style": "italic"
+    },
+    "keyword": {
+      "color": "#007aff",
+      "style": "bold"
+    },
+    "string": {
+      "color": "#62ba46"
+    },
+    "number": {
+      "color": "#b184db",
+      "style": "italic"
+    },
+    "function": {
+      "color": "#4a9edb"
+    },
+    "type": {
+      "color": "#45a3ad",
+      "style": "italic"
+    },
+    "decorator": {
+      "color": "#c96a6a"
+    },
+    "variable": {
+      "color": "#e8eef2"
+    },
+    "parameter": {
+      "color": "#c3cdd3"
+    },
+    "operator": {
+      "color": "#a7b1b8"
+    },
+    "punctuation": {
+      "color": "#86929a"
+    }
+  },
+  "terminal": {
+    "note": "ANSI 16-colour (dark chrome; the light terminal derives from modes.light). red, yellow, magenta derived in-register; bright green is the folium anchor; bright blue is dies itself. Normal blue and magenta are lightened just past 4.5:1 on the dark bg; normal red stays at 4.2:1 because the minimal AA lift lands indistinguishably close to bright red (bacca), and the register pair matters more. cursor-text is ferrum on the dies cursor (the locked button pair, 6.35:1).",
+    "background": "#10161c",
+    "foreground": "#e8eef2",
+    "cursor": "#007aff",
+    "cursor-text": "#0b1218",
+    "selection-bg": "#2b4356",
+    "selection-fg": "#e8eef2",
+    "ansi": [
+      "#171f26",
+      "#b85f5f",
+      "#4f9e3f",
+      "#c79a3d",
+      "#4981c4",
+      "#8e74ab",
+      "#3f93a0",
+      "#c6ced4",
+      "#3a4754",
+      "#c96a6a",
+      "#62ba46",
+      "#d9ae4a",
+      "#007aff",
+      "#b184db",
+      "#7fc4cf",
+      "#e8eef2"
+    ]
+  },
+  "type": {
+    "serif": {
+      "family": "IBM Plex Serif",
+      "license": "OFL",
+      "roles": [
+        "display",
+        "headings"
+      ],
+      "axes": "wght"
+    },
+    "sans": {
+      "family": "IBM Plex Sans",
+      "license": "OFL",
+      "roles": [
+        "interface",
+        "body"
+      ],
+      "axes": "wght, wdth"
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "license": "OFL",
+      "roles": [
+        "code",
+        "labels"
+      ],
+      "axes": "static weights"
+    },
+    "scale": {
+      "ratio": 1.25,
+      "base": "1rem",
+      "steps": {
+        "xs": "0.64rem",
+        "sm": "0.8rem",
+        "base": "1rem",
+        "lg": "1.25rem",
+        "xl": "1.563rem",
+        "2xl": "1.953rem",
+        "3xl": "2.441rem",
+        "4xl": "3.052rem",
+        "display": "clamp(2.5rem, 6vw, 4rem)",
+        "poster": "clamp(3rem, 10vw, 6.5rem)"
+      },
+      "leading": {
+        "tight": 1.08,
+        "snug": 1.3,
+        "normal": 1.55,
+        "relaxed": 1.7
+      },
+      "weight": {
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      }
+    }
+  },
+  "spacing": {
+    "unit": "0.25rem",
+    "scale": {
+      "0": "0",
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "5": "1.25rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "10": "2.5rem",
+      "12": "3rem",
+      "16": "4rem",
+      "20": "5rem",
+      "24": "6rem"
+    },
+    "radius": {
+      "none": "0",
+      "sm": "2px",
+      "md": "4px",
+      "lg": "6px",
+      "pill": "999px"
+    },
+    "border": "1px"
+  },
+  "accessibility": {
+    "standard": "WCAG 2.1 (body 4.5:1, large/UI 3:1) plus a Machado-2009 CVD pass at full severity.",
+    "dark": {
+      "pruina on pix": 15.55,
+      "cinis on pix": 5.41,
+      "caelum on pix": 6.13,
+      "ferrum on caelum": 6.35,
+      "nebula on pix": 8.55
+    },
+    "light": {
+      "ink on charta": 14.64,
+      "muted on charta": 5.53,
+      "caelum on charta": 5.18,
+      "button on caelum": 5.32,
+      "tint-bright on charta": 5.09
+    },
+    "cvd": "The blue mark holds under all three axes (blue is the CVD-stable hue). Measured close pairs: number/function (7.2 protan, 5.5 deutan) and function/type (5.5 tritan) -- reinforced in style, not hue: keywords bold, types italic, numbers italic, comments italic, so no close pair relies on colour alone. Run scripts/cvd_check.py for the table.",
+    "rules": [
+      "Blue fills on the tint ramp use aer with dark ferrum text (dies on tint is below 3:1 in dark mode).",
+      "Blue-rare is an identity-tier rule; the code tier follows accessibility-first syntax logic with dies on keywords.",
+      "Borders are deliberately faint; lift only if visible separators are wanted."
+    ]
+  },
+  "notes": "0.1.0 founds Glauca as the light-first sibling of Try-Works: same machinery, same guarantees, inverted priority. The three anchors are placed, not decorated: dies (#007AFF) is light accent-bright, dark accent-deep, the keyword colour, the cursor, and ANSI bright blue; folium (#62BA46) is the string colour and ANSI bright green; cinis (#8C8C8C) is the dark mode's muted text exactly.",
+  "typography": {
+    "note": "Roles, not just sizes. IBM Plex Serif carries display and headings; IBM Plex Sans carries interface and long-form body (the clinical voice); IBM Plex Mono carries code and labels. Plex has no optical-size axis, so roles bind weight, leading, tracking, figures, and measure only.",
+    "fonts": {
+      "serif": {
+        "family": "IBM Plex Serif",
+        "axes": {
+          "wght": [
+            100,
+            700
+          ]
+        }
+      },
+      "sans": {
+        "family": "IBM Plex Sans",
+        "axes": {
+          "wght": [
+            100,
+            700
+          ],
+          "wdth": [
+            85,
+            100
+          ]
+        }
+      },
+      "mono": {
+        "family": "IBM Plex Mono",
+        "axes": {}
+      },
+      "reading": {
+        "family": "IBM Plex Sans",
+        "license": "OFL",
+        "axes": {
+          "wght": [
+            100,
+            700
+          ]
+        },
+        "note": "Body face. The sans IS the reading voice in Glauca; the serif is the display voice."
+      }
+    },
+    "fluid": {
+      "min-vw": 22,
+      "max-vw": 80
+    },
+    "measure": {
+      "body": "68ch",
+      "narrow": "54ch",
+      "wide": "74ch"
+    },
+    "features": {
+      "text": "\"kern\" 1, \"liga\" 1, \"onum\" 1, \"pnum\" 1",
+      "tabular": "\"kern\" 1, \"lnum\" 1, \"tnum\" 1",
+      "display": "\"kern\" 1, \"liga\" 1, \"dlig\" 1",
+      "code": "\"liga\" 0, \"calt\" 1"
+    },
+    "roles": {
+      "display": {
+        "font": "serif",
+        "fluid": [
+          2.75,
+          4.25
+        ],
+        "weight": 600,
+        "leading": 1.02,
+        "tracking": "-0.02em",
+        "features": "display",
+        "measure": "narrow",
+        "wrap": "balance"
+      },
+      "headline": {
+        "font": "serif",
+        "fluid": [
+          2.0,
+          3.0
+        ],
+        "weight": 600,
+        "leading": 1.08,
+        "tracking": "-0.014em",
+        "features": "display",
+        "wrap": "balance"
+      },
+      "title": {
+        "font": "serif",
+        "size": "1.602rem",
+        "weight": 600,
+        "leading": 1.14,
+        "tracking": "-0.008em",
+        "wrap": "balance"
+      },
+      "subhead": {
+        "font": "serif",
+        "size": "1.281rem",
+        "weight": 600,
+        "leading": 1.22,
+        "wrap": "balance"
+      },
+      "body-lg": {
+        "font": "reading",
+        "size": "1.125rem",
+        "weight": 400,
+        "leading": 1.6,
+        "tracking": "0",
+        "features": "text",
+        "measure": "body",
+        "wrap": "pretty"
+      },
+      "body": {
+        "font": "reading",
+        "size": "1rem",
+        "weight": 400,
+        "leading": 1.62,
+        "tracking": "0",
+        "features": "text",
+        "measure": "body",
+        "wrap": "pretty"
+      },
+      "caption": {
+        "font": "sans",
+        "size": "0.8rem",
+        "weight": 400,
+        "leading": 1.45,
+        "tracking": "0.005em",
+        "features": "text",
+        "measure": "narrow"
+      },
+      "eyebrow": {
+        "font": "mono",
+        "size": "0.75rem",
+        "weight": 500,
+        "leading": 1.2,
+        "tracking": "0.18em",
+        "transform": "uppercase"
+      },
+      "data": {
+        "font": "sans",
+        "size": "0.95rem",
+        "weight": 450,
+        "leading": 1.5,
+        "features": "tabular"
+      },
+      "code": {
+        "font": "mono",
+        "size": "0.9rem",
+        "weight": 400,
+        "leading": 1.55,
+        "features": "code"
+      }
+    }
+  },
+  "gamut": {
+    "note": "Wide-gamut blue for P3 displays; approximations pending an OKLab audit. sRGB hexes are the fallback.",
+    "p3": {
+      "dark": {
+        "accent": "color(display-p3 0.302 0.588 1)",
+        "accent-bright": "color(display-p3 0.478 0.703 1)"
+      },
+      "light": {
+        "accent": "color(display-p3 0.121 0.379 0.804)",
+        "accent-bright": "color(display-p3 0.148 0.472 1)"
+      }
+    }
+  },
+  "colorspace": "Hues authored in sRGB and audited in OKLCH. The glaucum tint ramp is hue-consistent (~230, desaturated) with even lightness steps; dies sits near OKLCH 0.60/0.19/258.",
+  "i18n": {
+    "unicode-range": "U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122",
+    "note": "Verified to cover European Portuguese including guillemets (« »), ordinals (º ª), the travessão (—), curly quotes, and the euro (€). Set lang='pt' so localized forms and accented uppercasing apply. Body is ragged-right; no web justification.",
+    "quotes": "pt uses guillemets first, curly second"
+  },
+  "dataviz": {
+    "note": "Categorical prioritises colour-blind discriminability over brand: Okabe-Ito. Sequential stays on the blue mark (dies ramp); diverging runs blue-copper (cool-warm, the CVD-safe axis). Magnitude scales encode value, so brand hue is free there.",
+    "categorical": {
+      "name": "Okabe-Ito (CVD-safe), brand-free by design",
+      "colors": [
+        "#E69F00",
+        "#0072B2",
+        "#009E73",
+        "#CC79A7",
+        "#D55E00",
+        "#56B4E9",
+        "#F0E442"
+      ]
+    },
+    "sequential": {
+      "name": "dies blue, perceptually even",
+      "colors": [
+        "#eaf2fc",
+        "#c3dcf5",
+        "#92c0ea",
+        "#5b9edb",
+        "#2f7cc4",
+        "#0b5aa0",
+        "#063a6b"
+      ]
+    },
+    "diverging": {
+      "name": "blue-copper, pale centre",
+      "colors": [
+        "#084b96",
+        "#3672b4",
+        "#7ba1cd",
+        "#c0d3e6",
+        "#f0efe9",
+        "#e6cdb0",
+        "#d3a26e",
+        "#b97435",
+        "#8f4f16"
+      ]
+    },
+    "plot": {
+      "light": {
+        "bg": "#ffffff",
+        "panel": "#ffffff",
+        "text": "#16222a",
+        "grid": "#dde6ea",
+        "muted": "#55646d",
+        "accent": "#0b62cf"
+      },
+      "dark": {
+        "bg": "#10161c",
+        "panel": "#10161c",
+        "text": "#e8eef2",
+        "grid": "#2a3540",
+        "muted": "#8c8c8c",
+        "accent": "#3d97ff"
+      }
+    },
+    "fonts": {
+      "base": "IBM Plex Sans",
+      "title": "IBM Plex Serif",
+      "mono": "IBM Plex Mono"
+    },
+    "shapes": {
+      "name": "markers paired with the categorical scale",
+      "matplotlib": [
+        "o",
+        "s",
+        "^",
+        "D",
+        "v",
+        "P",
+        "X"
+      ],
+      "ggplot_pch": [
+        16,
+        15,
+        17,
+        18,
+        25,
+        3,
+        4
+      ],
+      "linetypes": [
+        "solid",
+        "dashed",
+        "dotted",
+        "dashdot",
+        "longdash",
+        "twodash",
+        "12"
+      ]
+    }
+  },
+  "print": {
+    "note": "These CMYK values are uncalibrated starting points from a naive separation. Proof against a physical swatch before a print run; the printer's RIP and ICC profile are authoritative. #007AFF sits outside coated CMYK -- expect a duller press blue or run it as a spot.",
+    "profile": "PSO Coated v3 (FOGRA51) for coated stock; FOGRA39 where v3 is unavailable.",
+    "ink_limit": "300% total area coverage (FOGRA51). Keep the dark saxum and rich black under it.",
+    "rich_black": {
+      "recipe": "C70 M50 Y40 K100",
+      "note": "Cool rich black that reads like pix. Use plain K for text below ~24 pt to avoid registration fringing."
+    },
+    "cmyk": {
+      "pix": "C43 M21 Y0 K89",
+      "pruina": "C4 M2 Y0 K5",
+      "dies": "C100 M52 Y0 K0",
+      "aer": "C58 M30 Y0 K0",
+      "imum": "C95 M50 Y0 K41",
+      "tint-deep": "C65 M24 Y0 K75",
+      "tint": "C50 M19 Y0 K58",
+      "tint-bright": "C53 M17 Y0 K48",
+      "tint-pale": "C14 M4 Y0 K16",
+      "paper": "C2 M1 Y0 K4",
+      "ink": "C48 M19 Y0 K84",
+      "light-accent": "C95 M53 Y0 K19",
+      "folium": "C47 M0 Y62 K27"
+    },
+    "gamut_risk": [
+      "dies (#007AFF)",
+      "aer",
+      "folium (#62BA46)",
+      "data-viz blue #0072B2",
+      "data-viz green #009E73"
+    ],
+    "spot": "If the brand blue must match exactly, run it as a process-blue spot (Pantone 2175 C region) and confirm on a swatch book; the naive separation above will print duller.",
+    "bleed_mm": 3,
+    "safe_mm": 5,
+    "sizes_mm": {
+      "A3": "297x420",
+      "A2": "420x594",
+      "A1": "594x841",
+      "A0": "841x1189"
+    }
+  },
+  "a11y": {
+    "note": "Beyond body contrast: visible focus, forced-colors support, a higher-contrast path, and a reduced-transparency path. All emitted to css/a11y.css.",
+    "focus": {
+      "dark": "#6cb2ff",
+      "light": "#0b62cf",
+      "width": "2px",
+      "offset": "2px"
+    },
+    "contrast_more": {
+      "dark": {
+        "text-muted": "#9aa4ab",
+        "border": "#56626c"
+      },
+      "light": {
+        "text-muted": "#3e4d55",
+        "border": "#7b8a91"
+      }
+    }
+  },
+  "performance": {
+    "note": "Subset to i18n.unicode-range as woff2 (src/web/public/fonts). Fallback metrics computed with fontTools from the Plex TTFs in src/fonts against the system fallbacks: size-adjust is the a-zA-Z0-9 average-advance ratio, ascent/descent/line-gap are the target's line metrics divided by size-adjust per the CSS override spec.",
+    "subset_range_ref": "i18n.unicode-range",
+    "payload_kb": {
+      "IBMPlexSerif": 49,
+      "IBMPlexSans": 66,
+      "IBMPlexMono": 14,
+      "total": 129
+    },
+    "fallbacks": {
+      "IBM Plex Serif": {
+        "fallback": "Georgia",
+        "size_adjust": 103.7,
+        "ascent": 98.9,
+        "descent": 26.5,
+        "line_gap": 0.0
+      },
+      "IBM Plex Sans": {
+        "fallback": "Arial",
+        "size_adjust": 99.1,
+        "ascent": 103.5,
+        "descent": 27.8,
+        "line_gap": 0.0
+      },
+      "IBM Plex Mono": {
+        "fallback": "Courier New",
+        "size_adjust": 100.0,
+        "ascent": 102.5,
+        "descent": 27.5,
+        "line_gap": 0.0
+      }
+    }
+  },
+  "motion": {
+    "note": "Motion marks a change; it does not decorate. Durations are short, eases are quiet, and prefers-reduced-motion collapses them.",
+    "durations": {
+      "fast": "120ms",
+      "base": "200ms",
+      "slow": "320ms",
+      "slower": "480ms"
+    },
+    "easings": {
+      "standard": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "out": "cubic-bezier(0, 0, 0.2, 1)",
+      "in": "cubic-bezier(0.4, 0, 1, 1)",
+      "emphasized": "cubic-bezier(0.2, 0, 0, 1)"
+    }
+  },
+  "brand": {
+    "essence": "One sky-blue mark on a frost-bloom field.",
+    "tagline": "Clear glass, cold light.",
+    "family": {
+      "try-works": "the dark sibling: a Moby-Dick system, sea and fire, dark-first",
+      "glauca": "the light sibling: the glaucous bloom, blue and frost, light-first"
+    },
+    "mark": {
+      "primary": "wordmark, IBM Plex Serif semibold",
+      "emblem": "src/assets/logo.svg (light), src/assets/logo-dark.svg (dark): a single blue point on a pale disc"
+    },
+    "note": "Type-forward by choice; see BRAND.md."
+  },
+  "product": {
+    "audience": "an academic-maker shipping web, slides, posters, code, and statistical plots in R, Python, Quarto, Typst, 11ty; clinical-clean aesthetic, light-first",
+    "tiers": {
+      "core": [
+        "r",
+        "python",
+        "typst slides",
+        "css",
+        "web (11ty)",
+        "vscode",
+        "tailwind",
+        "obsidian",
+        "ghostty terminal",
+        "quarto"
+      ],
+      "maintained": [
+        "typst poster",
+        "print",
+        "iterm2",
+        "oh-my-zsh",
+        "zed",
+        "vivaldi",
+        "firefox",
+        "thunderbird",
+        "zotero",
+        "miniflux",
+        "markedit",
+        "pptx"
+      ],
+      "confirm": []
+    },
+    "top_gap": "none at 0.1.0; surfaces inherited complete from the Try-Works machinery, plus the reading-and-reference set (Firefox, Thunderbird, Zotero) added for the academic workflow.",
+    "scope": "0.x: the public surface may still move; semver from 1.0.",
+    "note": "See PRODUCT.md."
+  }
+}

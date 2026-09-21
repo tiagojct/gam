@@ -1,0 +1,23 @@
+{
+  "name": "Ambergris Dark",
+  "background": "#0C1117",
+  "foreground": "#EAEDEF",
+  "cursorColor": "#FAFBFD",
+  "selectionBackground": "#143336",
+  "black": "#1A1F26",
+  "red": "#CF7F79",
+  "green": "#7BB587",
+  "yellow": "#D4BC79",
+  "blue": "#72A5DE",
+  "purple": "#B893D4",
+  "cyan": "#5BB6B1",
+  "white": "#C8CBD0",
+  "brightBlack": "#5C6168",
+  "brightRed": "#E7958E",
+  "brightGreen": "#91CB9C",
+  "brightYellow": "#E8CF8C",
+  "brightBlue": "#88BCF6",
+  "brightPurple": "#CEA9EB",
+  "brightCyan": "#86CDC8",
+  "brightWhite": "#FAFBFD"
+}

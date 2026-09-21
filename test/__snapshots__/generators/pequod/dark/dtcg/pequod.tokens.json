@@ -1,0 +1,303 @@
+{
+  "$description": "Pequod 0.2.0-alpha, exported by Gam",
+  "log": {
+    "50": {
+      "$type": "color",
+      "$value": "#F7F3EE",
+      "$description": "Log 50"
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#EAE1D7",
+      "$description": "Log 100"
+    },
+    "150": {
+      "$type": "color",
+      "$value": "#DBC9B6",
+      "$description": "Log 150"
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#CFAD8E",
+      "$description": "Log 200"
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#BD8C68",
+      "$description": "Log 300"
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#A16E50",
+      "$description": "Log 400"
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#835A49",
+      "$description": "Log 500"
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#335260",
+      "$description": "Log 600"
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#163F54",
+      "$description": "Log 700"
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#0D2F42",
+      "$description": "Log 800"
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#0C222F",
+      "$description": "Log 900"
+    },
+    "950": {
+      "$type": "color",
+      "$value": "#0B1720",
+      "$description": "Log 950"
+    }
+  },
+  "accent": {
+    "ahab": {
+      "light": {
+        "$type": "color",
+        "$value": "#A83732",
+        "$description": "Ahab, red"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#E3877C"
+      }
+    },
+    "starbuck": {
+      "light": {
+        "$type": "color",
+        "$value": "#0082B1",
+        "$description": "Starbuck, blue"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#A6DFFF"
+      }
+    },
+    "queequeg": {
+      "light": {
+        "$type": "color",
+        "$value": "#253E82",
+        "$description": "Queequeg, indigo"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#838CCF"
+      }
+    },
+    "pip": {
+      "light": {
+        "$type": "color",
+        "$value": "#6A4A00",
+        "$description": "Pip, yellow"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#DEC577"
+      }
+    },
+    "ishmael": {
+      "light": {
+        "$type": "color",
+        "$value": "#76716B",
+        "$description": "Ishmael, grey"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#BFBBB6"
+      }
+    },
+    "stubb": {
+      "light": {
+        "$type": "color",
+        "$value": "#CA6435",
+        "$description": "Stubb, orange"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#FFD9BB"
+      }
+    },
+    "tashtego": {
+      "light": {
+        "$type": "color",
+        "$value": "#177C55",
+        "$description": "Tashtego, green"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#82C4A2"
+      }
+    },
+    "daggoo": {
+      "light": {
+        "$type": "color",
+        "$value": "#552823",
+        "$description": "Daggoo, brown"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#A17069"
+      }
+    }
+  },
+  "dark": {
+    "$description": "Below deck (dark)",
+    "bg": {
+      "$type": "color",
+      "$value": "{log.950}"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "{log.800}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{log.100}"
+    },
+    "text-muted": {
+      "$type": "color",
+      "$value": "{log.300}"
+    },
+    "text-subtle": {
+      "$type": "color",
+      "$value": "{log.400}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{log.700}"
+    },
+    "link": {
+      "$type": "color",
+      "$value": "{log.300}"
+    },
+    "link-hover": {
+      "$type": "color",
+      "$value": "#BD8C68"
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "{log.300}"
+    },
+    "on-accent": {
+      "$type": "color",
+      "$value": "#0B1720"
+    },
+    "button": {
+      "$type": "color",
+      "$value": "#BD8C68"
+    },
+    "on-button": {
+      "$type": "color",
+      "$value": "#0B1720"
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "{log.300}"
+    },
+    "selection": {
+      "$type": "color",
+      "$value": "{log.800}"
+    },
+    "code": {
+      "keyword": {
+        "$type": "color",
+        "$value": "#E3877C"
+      },
+      "string": {
+        "$type": "color",
+        "$value": "#82C4A2"
+      },
+      "number": {
+        "$type": "color",
+        "$value": "#DEC577"
+      },
+      "comment": {
+        "$type": "color",
+        "$value": "#BFBBB6",
+        "$extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "function": {
+        "$type": "color",
+        "$value": "#A6DFFF"
+      },
+      "type": {
+        "$type": "color",
+        "$value": "#838CCF"
+      },
+      "constant": {
+        "$type": "color",
+        "$value": "#FFD9BB"
+      },
+      "variable": {
+        "$type": "color",
+        "$value": "#A17069"
+      },
+      "operator": {
+        "$type": "color",
+        "$value": "#BFBBB6"
+      },
+      "punctuation": {
+        "$type": "color",
+        "$value": "#BFBBB6"
+      },
+      "decorator": {
+        "$type": "color",
+        "$value": "#FFD9BB"
+      },
+      "parameter": {
+        "$type": "color",
+        "$value": "#A17069"
+      }
+    },
+    "series": {
+      "1": {
+        "$type": "color",
+        "$value": "#E3877C"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "#A6DFFF"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#838CCF"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#DEC577"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#BFBBB6"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#FFD9BB"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "#82C4A2"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "#A17069"
+      }
+    }
+  }
+}

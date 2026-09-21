@@ -1,0 +1,23 @@
+{
+  "name": "Glauca Pruina",
+  "background": "#F0F4F6",
+  "foreground": "#16222A",
+  "cursorColor": "#0B62CF",
+  "selectionBackground": "#35576B",
+  "black": "#0B1218",
+  "red": "#A55859",
+  "green": "#3F7B39",
+  "yellow": "#846C36",
+  "blue": "#4070A8",
+  "purple": "#786594",
+  "cyan": "#357884",
+  "white": "#3E4D55",
+  "brightBlack": "#55646D",
+  "brightRed": "#B06061",
+  "brightGreen": "#47833C",
+  "brightYellow": "#87733D",
+  "brightBlue": "#0273EE",
+  "brightPurple": "#8669A9",
+  "brightCyan": "#517D86",
+  "brightWhite": "#16222A"
+}

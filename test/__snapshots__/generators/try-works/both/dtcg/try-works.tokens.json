@@ -1,0 +1,458 @@
+{
+  "$description": "Try-Works 1.0.0, exported by Gam",
+  "sea": {
+    "whale": {
+      "$type": "color",
+      "$value": "#F1EFE9",
+      "$description": "Whale (whale)"
+    },
+    "bone": {
+      "$type": "color",
+      "$value": "#DEE7E4",
+      "$description": "Bone (whale)"
+    },
+    "foam": {
+      "$type": "color",
+      "$value": "#8FB6BD",
+      "$description": "Foam (sea)"
+    },
+    "gull": {
+      "$type": "color",
+      "$value": "#97A0A4",
+      "$description": "Gull (whale)"
+    },
+    "spray": {
+      "$type": "color",
+      "$value": "#4D7680",
+      "$description": "Spray (sea)"
+    },
+    "swell": {
+      "$type": "color",
+      "$value": "#2C4953",
+      "$description": "Swell (sea)"
+    },
+    "deck": {
+      "$type": "color",
+      "$value": "#232B32",
+      "$description": "Deck (ground)"
+    },
+    "trough": {
+      "$type": "color",
+      "$value": "#14242C",
+      "$description": "Trough (sea)"
+    },
+    "hold": {
+      "$type": "color",
+      "$value": "#1B2127",
+      "$description": "Hold (ground)"
+    },
+    "pitch": {
+      "$type": "color",
+      "$value": "#12161B",
+      "$description": "Pitch (ground)"
+    },
+    "iron": {
+      "$type": "color",
+      "$value": "#11151A",
+      "$description": "Iron (ground)"
+    }
+  },
+  "accent": {
+    "ember": {
+      "light": {
+        "$type": "color",
+        "$value": "#9E5017",
+        "$description": "Ember, orange"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#C9651D"
+      }
+    },
+    "flame": {
+      "light": {
+        "$type": "color",
+        "$value": "#7A3A10",
+        "$description": "Flame, orange"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#E0832A"
+      }
+    },
+    "oil": {
+      "light": {
+        "$type": "color",
+        "$value": "#7A3A10",
+        "$description": "Oil, orange"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#9A4A16"
+      }
+    },
+    "kelp": {
+      "light": {
+        "$type": "color",
+        "$value": "#4F6855",
+        "$description": "Kelp, green"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#86A87F"
+      }
+    },
+    "brick": {
+      "light": {
+        "$type": "color",
+        "$value": "#7D4C40",
+        "$description": "Brick, red"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#D06A52"
+      }
+    },
+    "dusk": {
+      "light": {
+        "$type": "color",
+        "$value": "#655C7A",
+        "$description": "Dusk, violet"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#A487BA"
+      }
+    },
+    "tide": {
+      "light": {
+        "$type": "color",
+        "$value": "#3F6274",
+        "$description": "Tide, blue"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#5F93B0"
+      }
+    },
+    "shoal": {
+      "light": {
+        "$type": "color",
+        "$value": "#3F656B",
+        "$description": "Shoal, cyan"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "#5F97A0"
+      }
+    }
+  },
+  "dark": {
+    "$description": "Try-Fire (dark)",
+    "bg": {
+      "$type": "color",
+      "$value": "#12161B"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#1B2127"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "#F1EFE9"
+    },
+    "text-muted": {
+      "$type": "color",
+      "$value": "#97A0A4"
+    },
+    "text-subtle": {
+      "$type": "color",
+      "$value": "#97A0A4"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "#2C3640"
+    },
+    "link": {
+      "$type": "color",
+      "$value": "#C9651D"
+    },
+    "link-hover": {
+      "$type": "color",
+      "$value": "#E0832A"
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "#C9651D"
+    },
+    "on-accent": {
+      "$type": "color",
+      "$value": "#11151A"
+    },
+    "button": {
+      "$type": "color",
+      "$value": "#C9651D"
+    },
+    "on-button": {
+      "$type": "color",
+      "$value": "#11151A"
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "#E0832A"
+    },
+    "selection": {
+      "$type": "color",
+      "$value": "#2C4953"
+    },
+    "code": {
+      "keyword": {
+        "$type": "color",
+        "$value": "#C9651D",
+        "$extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "bold"
+          }
+        }
+      },
+      "string": {
+        "$type": "color",
+        "$value": "#86A87F"
+      },
+      "number": {
+        "$type": "color",
+        "$value": "#A487BA"
+      },
+      "comment": {
+        "$type": "color",
+        "$value": "#97A0A4",
+        "$extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "function": {
+        "$type": "color",
+        "$value": "#5F93B0"
+      },
+      "type": {
+        "$type": "color",
+        "$value": "#5F97A0",
+        "$extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "constant": {
+        "$type": "color",
+        "$value": "#A487BA"
+      },
+      "variable": {
+        "$type": "color",
+        "$value": "#F1EFE9"
+      },
+      "operator": {
+        "$type": "color",
+        "$value": "#AEB6B8"
+      },
+      "punctuation": {
+        "$type": "color",
+        "$value": "#8A9296"
+      },
+      "decorator": {
+        "$type": "color",
+        "$value": "#D06A52"
+      },
+      "parameter": {
+        "$type": "color",
+        "$value": "#CDD2D3"
+      }
+    },
+    "series": {
+      "1": {
+        "$type": "color",
+        "$value": "#E69F00"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "#0072B2"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#009E73"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#CC79A7"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#D55E00"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#56B4E9"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "#F0E442"
+      }
+    }
+  },
+  "light": {
+    "$description": "True Lamp (light)",
+    "bg": {
+      "$type": "color",
+      "$value": "#DEE7E4"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#E7EFEB"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "#18272B"
+    },
+    "text-muted": {
+      "$type": "color",
+      "$value": "#52646A"
+    },
+    "text-subtle": {
+      "$type": "color",
+      "$value": "#52646A"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "#C4D2CD"
+    },
+    "link": {
+      "$type": "color",
+      "$value": "#9E5017"
+    },
+    "link-hover": {
+      "$type": "color",
+      "$value": "#7A3A10"
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "#9E5017"
+    },
+    "on-accent": {
+      "$type": "color",
+      "$value": "#EEF3F0"
+    },
+    "button": {
+      "$type": "color",
+      "$value": "#9E5017"
+    },
+    "on-button": {
+      "$type": "color",
+      "$value": "#EEF3F0"
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "#9E5017"
+    },
+    "selection": {
+      "$type": "color",
+      "$value": "#B4CCC9"
+    },
+    "code": {
+      "keyword": {
+        "$type": "color",
+        "$value": "#9E5017",
+        "$extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "bold"
+          }
+        }
+      },
+      "string": {
+        "$type": "color",
+        "$value": "#4F6855"
+      },
+      "number": {
+        "$type": "color",
+        "$value": "#655C7A"
+      },
+      "comment": {
+        "$type": "color",
+        "$value": "#52646A",
+        "$extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "function": {
+        "$type": "color",
+        "$value": "#3F6274"
+      },
+      "type": {
+        "$type": "color",
+        "$value": "#3F656B",
+        "$extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "constant": {
+        "$type": "color",
+        "$value": "#655C7A"
+      },
+      "variable": {
+        "$type": "color",
+        "$value": "#18272B"
+      },
+      "operator": {
+        "$type": "color",
+        "$value": "#52646A"
+      },
+      "punctuation": {
+        "$type": "color",
+        "$value": "#52646A"
+      },
+      "decorator": {
+        "$type": "color",
+        "$value": "#7D4C40"
+      },
+      "parameter": {
+        "$type": "color",
+        "$value": "#2C3C41"
+      }
+    },
+    "series": {
+      "1": {
+        "$type": "color",
+        "$value": "#E69F00"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "#0072B2"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#009E73"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#CC79A7"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#D55E00"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#56B4E9"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "#F0E442"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Pequod Parchment",
+  "background": "#EAE1D7",
+  "foreground": "#0D2F42",
+  "cursorColor": "#163F54",
+  "selectionBackground": "#DBC9B6",
+  "black": "#0C222F",
+  "red": "#A83732",
+  "green": "#177C55",
+  "yellow": "#6A4A00",
+  "blue": "#0082B1",
+  "purple": "#253E82",
+  "cyan": "#0C7F83",
+  "white": "#835A49",
+  "brightBlack": "#335260",
+  "brightRed": "#893535",
+  "brightGreen": "#156D51",
+  "brightYellow": "#57450D",
+  "brightBlue": "#03719B",
+  "brightPurple": "#203B75",
+  "brightCyan": "#0C6F76",
+  "brightWhite": "#0D2F42"
+}

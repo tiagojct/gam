@@ -29,6 +29,8 @@ function readAll(dir, paths) {
 }
 
 function commitOf(dir) {
+  const pinned = join(dir, 'COMMIT');
+  if (existsSync(pinned)) return readFileSync(pinned, 'utf8').trim();
   try {
     return execSync('git rev-parse --short HEAD', { cwd: dir, encoding: 'utf8' }).trim();
   } catch {
@@ -36,9 +38,9 @@ function commitOf(dir) {
   }
 }
 
-export function loadFamily(id) {
+export function loadFamily(id, vendor = VENDOR) {
   const a = ADAPTERS[id];
-  const dir = join(VENDOR, a.dir);
+  const dir = join(vendor, a.dir);
   const json = JSON.parse(readFileSync(join(dir, a.tokens), 'utf8'));
   const files = readAll(dir, a.NEEDS);
   const fam = a.adapt({ json, files });
@@ -46,9 +48,9 @@ export function loadFamily(id) {
   return fam;
 }
 
-export function loadAll() {
+export function loadAll(vendor = VENDOR) {
   const out = {};
-  for (const id of Object.keys(ADAPTERS)) out[id] = loadFamily(id);
+  for (const id of Object.keys(ADAPTERS)) out[id] = loadFamily(id, vendor);
   return out;
 }
 

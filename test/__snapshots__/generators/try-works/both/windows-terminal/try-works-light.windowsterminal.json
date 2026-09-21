@@ -1,0 +1,23 @@
+{
+  "name": "Try-Works True Lamp",
+  "background": "#DEE7E4",
+  "foreground": "#18272B",
+  "cursorColor": "#9E5017",
+  "selectionBackground": "#264852",
+  "black": "#1B2127",
+  "red": "#C05A3A",
+  "green": "#6F8F6A",
+  "yellow": "#C9651D",
+  "blue": "#46708A",
+  "purple": "#8A6F9E",
+  "cyan": "#5F97A0",
+  "white": "#C9CCCE",
+  "brightBlack": "#3A4754",
+  "brightRed": "#D06A52",
+  "brightGreen": "#86A87F",
+  "brightYellow": "#E0832A",
+  "brightBlue": "#5F93B0",
+  "brightPurple": "#A487BA",
+  "brightCyan": "#8FB6BD",
+  "brightWhite": "#F1EFE9"
+}

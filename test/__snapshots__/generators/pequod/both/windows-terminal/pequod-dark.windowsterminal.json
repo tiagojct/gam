@@ -1,0 +1,23 @@
+{
+  "name": "Pequod Below deck",
+  "background": "#0B1720",
+  "foreground": "#EAE1D7",
+  "cursorColor": "#BD8C68",
+  "selectionBackground": "#0D2F42",
+  "black": "#0C222F",
+  "red": "#E3877C",
+  "green": "#82C4A2",
+  "yellow": "#DEC577",
+  "blue": "#A6DFFF",
+  "purple": "#838CCF",
+  "cyan": "#9DC2C5",
+  "white": "#EAE1D7",
+  "brightBlack": "#335260",
+  "brightRed": "#E99C93",
+  "brightGreen": "#AFCCA6",
+  "brightYellow": "#E8CB8C",
+  "brightBlue": "#A0C2D4",
+  "brightPurple": "#AAADDA",
+  "brightCyan": "#BCD9DB",
+  "brightWhite": "#F7F3EE"
+}

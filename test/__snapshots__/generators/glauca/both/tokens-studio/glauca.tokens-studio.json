@@ -1,0 +1,486 @@
+{
+  "core": {
+    "frost": {
+      "charta": {
+        "value": "#F0F4F6",
+        "type": "color",
+        "description": "Charta (pruina)"
+      },
+      "pruina": {
+        "value": "#E8EEF2",
+        "type": "color",
+        "description": "Pruina (pruina)"
+      },
+      "nebula": {
+        "value": "#93B7C9",
+        "type": "color",
+        "description": "Nebula (glaucum)"
+      },
+      "cinis": {
+        "value": "#8C8C8C",
+        "type": "color",
+        "description": "Cinis (pruina)"
+      },
+      "spuma": {
+        "value": "#4D7391",
+        "type": "color",
+        "description": "Spuma (glaucum)"
+      },
+      "vadum": {
+        "value": "#2B4356",
+        "type": "color",
+        "description": "Vadum (glaucum)"
+      },
+      "petra": {
+        "value": "#1F2932",
+        "type": "color",
+        "description": "Petra (saxum)"
+      },
+      "caligo": {
+        "value": "#142430",
+        "type": "color",
+        "description": "Caligo (glaucum)"
+      },
+      "umbra": {
+        "value": "#171F26",
+        "type": "color",
+        "description": "Umbra (saxum)"
+      },
+      "pix": {
+        "value": "#10161C",
+        "type": "color",
+        "description": "Pix (saxum)"
+      },
+      "ferrum": {
+        "value": "#0B1218",
+        "type": "color",
+        "description": "Ferrum (saxum)"
+      }
+    },
+    "accent": {
+      "dies": {
+        "light": {
+          "value": "#0B62CF",
+          "type": "color",
+          "description": "Dies, blue"
+        },
+        "dark": {
+          "value": "#007AFF",
+          "type": "color"
+        }
+      },
+      "aer": {
+        "light": {
+          "value": "#084B96",
+          "type": "color",
+          "description": "Aer, blue"
+        },
+        "dark": {
+          "value": "#6CB2FF",
+          "type": "color"
+        }
+      },
+      "imum": {
+        "light": {
+          "value": "#084B96",
+          "type": "color",
+          "description": "Imum, blue"
+        },
+        "dark": {
+          "value": "#084B96",
+          "type": "color"
+        }
+      },
+      "folium": {
+        "light": {
+          "value": "#3C6E38",
+          "type": "color",
+          "description": "Folium, green"
+        },
+        "dark": {
+          "value": "#62BA46",
+          "type": "color"
+        }
+      },
+      "bacca": {
+        "light": {
+          "value": "#784A4D",
+          "type": "color",
+          "description": "Bacca, red"
+        },
+        "dark": {
+          "value": "#C96A6A",
+          "type": "color"
+        }
+      },
+      "viola": {
+        "light": {
+          "value": "#6B588B",
+          "type": "color",
+          "description": "Viola, violet"
+        },
+        "dark": {
+          "value": "#B184DB",
+          "type": "color"
+        }
+      },
+      "lacus": {
+        "light": {
+          "value": "#33668B",
+          "type": "color",
+          "description": "Lacus, blue"
+        },
+        "dark": {
+          "value": "#4A9EDB",
+          "type": "color"
+        }
+      },
+      "unda": {
+        "light": {
+          "value": "#306972",
+          "type": "color",
+          "description": "Unda, cyan"
+        },
+        "dark": {
+          "value": "#45A3AD",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "dark": {
+    "description": "Profundum (dark)",
+    "bg": {
+      "value": "#10161C",
+      "type": "color"
+    },
+    "surface": {
+      "value": "#171F26",
+      "type": "color"
+    },
+    "text": {
+      "value": "#E8EEF2",
+      "type": "color"
+    },
+    "text-muted": {
+      "value": "#8C8C8C",
+      "type": "color"
+    },
+    "text-subtle": {
+      "value": "#8C8C8C",
+      "type": "color"
+    },
+    "border": {
+      "value": "#2A3540",
+      "type": "color"
+    },
+    "link": {
+      "value": "#3D97FF",
+      "type": "color"
+    },
+    "link-hover": {
+      "value": "#6CB2FF",
+      "type": "color"
+    },
+    "accent": {
+      "value": "#3D97FF",
+      "type": "color"
+    },
+    "on-accent": {
+      "value": "#0B1218",
+      "type": "color"
+    },
+    "button": {
+      "value": "#3D97FF",
+      "type": "color"
+    },
+    "on-button": {
+      "value": "#0B1218",
+      "type": "color"
+    },
+    "focus": {
+      "value": "#6CB2FF",
+      "type": "color"
+    },
+    "selection": {
+      "value": "#2B4356",
+      "type": "color"
+    },
+    "code": {
+      "keyword": {
+        "value": "#007AFF",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "bold"
+          }
+        }
+      },
+      "string": {
+        "value": "#62BA46",
+        "type": "color"
+      },
+      "number": {
+        "value": "#B184DB",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "comment": {
+        "value": "#8C8C8C",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "function": {
+        "value": "#4A9EDB",
+        "type": "color"
+      },
+      "type": {
+        "value": "#45A3AD",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "constant": {
+        "value": "#B184DB",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "variable": {
+        "value": "#E8EEF2",
+        "type": "color"
+      },
+      "operator": {
+        "value": "#A7B1B8",
+        "type": "color"
+      },
+      "punctuation": {
+        "value": "#86929A",
+        "type": "color"
+      },
+      "decorator": {
+        "value": "#C96A6A",
+        "type": "color"
+      },
+      "parameter": {
+        "value": "#C3CDD3",
+        "type": "color"
+      }
+    },
+    "series": {
+      "1": {
+        "value": "#E69F00",
+        "type": "color"
+      },
+      "2": {
+        "value": "#0072B2",
+        "type": "color"
+      },
+      "3": {
+        "value": "#009E73",
+        "type": "color"
+      },
+      "4": {
+        "value": "#CC79A7",
+        "type": "color"
+      },
+      "5": {
+        "value": "#D55E00",
+        "type": "color"
+      },
+      "6": {
+        "value": "#56B4E9",
+        "type": "color"
+      },
+      "7": {
+        "value": "#F0E442",
+        "type": "color"
+      }
+    }
+  },
+  "light": {
+    "description": "Pruina (light)",
+    "bg": {
+      "value": "#F0F4F6",
+      "type": "color"
+    },
+    "surface": {
+      "value": "#F7FAFB",
+      "type": "color"
+    },
+    "text": {
+      "value": "#16222A",
+      "type": "color"
+    },
+    "text-muted": {
+      "value": "#55646D",
+      "type": "color"
+    },
+    "text-subtle": {
+      "value": "#55646D",
+      "type": "color"
+    },
+    "border": {
+      "value": "#CDD7DC",
+      "type": "color"
+    },
+    "link": {
+      "value": "#0B62CF",
+      "type": "color"
+    },
+    "link-hover": {
+      "value": "#084B96",
+      "type": "color"
+    },
+    "accent": {
+      "value": "#0B62CF",
+      "type": "color"
+    },
+    "on-accent": {
+      "value": "#F2F7FB",
+      "type": "color"
+    },
+    "button": {
+      "value": "#0B62CF",
+      "type": "color"
+    },
+    "on-button": {
+      "value": "#F2F7FB",
+      "type": "color"
+    },
+    "focus": {
+      "value": "#0B62CF",
+      "type": "color"
+    },
+    "selection": {
+      "value": "#B7CDD6",
+      "type": "color"
+    },
+    "code": {
+      "keyword": {
+        "value": "#0B62CF",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "bold"
+          }
+        }
+      },
+      "string": {
+        "value": "#3C6E38",
+        "type": "color"
+      },
+      "number": {
+        "value": "#6B588B",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "comment": {
+        "value": "#55646D",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "function": {
+        "value": "#33668B",
+        "type": "color"
+      },
+      "type": {
+        "value": "#306972",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "constant": {
+        "value": "#6B588B",
+        "type": "color",
+        "extensions": {
+          "eu.tiagojacinto.gam": {
+            "style": "italic"
+          }
+        }
+      },
+      "variable": {
+        "value": "#16222A",
+        "type": "color"
+      },
+      "operator": {
+        "value": "#55646D",
+        "type": "color"
+      },
+      "punctuation": {
+        "value": "#55646D",
+        "type": "color"
+      },
+      "decorator": {
+        "value": "#784A4D",
+        "type": "color"
+      },
+      "parameter": {
+        "value": "#2C3941",
+        "type": "color"
+      }
+    },
+    "series": {
+      "1": {
+        "value": "#E69F00",
+        "type": "color"
+      },
+      "2": {
+        "value": "#0072B2",
+        "type": "color"
+      },
+      "3": {
+        "value": "#009E73",
+        "type": "color"
+      },
+      "4": {
+        "value": "#CC79A7",
+        "type": "color"
+      },
+      "5": {
+        "value": "#D55E00",
+        "type": "color"
+      },
+      "6": {
+        "value": "#56B4E9",
+        "type": "color"
+      },
+      "7": {
+        "value": "#F0E442",
+        "type": "color"
+      }
+    }
+  },
+  "$metadata": {
+    "tokenSetOrder": [
+      "core",
+      "dark",
+      "light"
+    ]
+  }
+}

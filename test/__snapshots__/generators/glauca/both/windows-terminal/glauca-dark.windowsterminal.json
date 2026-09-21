@@ -1,0 +1,23 @@
+{
+  "name": "Glauca Profundum",
+  "background": "#10161C",
+  "foreground": "#E8EEF2",
+  "cursorColor": "#007AFF",
+  "selectionBackground": "#2B4356",
+  "black": "#171F26",
+  "red": "#B85F5F",
+  "green": "#4F9E3F",
+  "yellow": "#C79A3D",
+  "blue": "#4981C4",
+  "purple": "#8E74AB",
+  "cyan": "#3F93A0",
+  "white": "#C6CED4",
+  "brightBlack": "#3A4754",
+  "brightRed": "#C96A6A",
+  "brightGreen": "#62BA46",
+  "brightYellow": "#D9AE4A",
+  "brightBlue": "#007AFF",
+  "brightPurple": "#B184DB",
+  "brightCyan": "#7FC4CF",
+  "brightWhite": "#E8EEF2"
+}
