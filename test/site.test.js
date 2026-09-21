@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { themeCss } from '../src/site/theme-css.js';
 
 const root = new URL('../', import.meta.url).pathname;
@@ -17,6 +18,17 @@ function walk(dir, out = []) {
 }
 
 const EMOJI = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F900}-\u{1F9FF}\u{FE0F}]/u;
+
+describe('repository', () => {
+  it('has no untracked or ignored files under src/ and test/ (the CI build sees only tracked files)', () => {
+    let out = '';
+    try {
+      out = execFileSync('git', ['ls-files', '--others', '--exclude-standard', '--', 'src', 'test'], { cwd: root, encoding: 'utf8' });
+      out += execFileSync('git', ['ls-files', '--others', '--ignored', '--exclude-standard', '--', 'src/site', 'src/pages', 'src/generators', 'src/model', 'src/colour', 'test'], { cwd: root, encoding: 'utf8' });
+    } catch { return; }
+    expect(out.trim().split('\n').filter(Boolean)).toEqual([]);
+  });
+});
 
 describe('house style', () => {
   it('no emoji anywhere in the source, docs or generated pages', () => {
