@@ -8,8 +8,11 @@ name: Build and deploy
 # repository (event family-updated), on the weekly schedule and on manual
 # runs. Version tags (v*) also publish semver tags.
 #
-# No secrets are needed here: GITHUB_TOKEN pushes the image. The family
-# repositories hold GAM_DISPATCH_TOKEN to trigger this workflow.
+# Secrets: GITHUB_TOKEN pushes the image; GAM_VENDOR_TOKEN (a fine-grained
+# personal access token with Contents: read on the private family
+# repositories) lets the build clone them, and can be removed once they
+# are public. The family repositories hold GAM_DISPATCH_TOKEN to trigger
+# this workflow.
 
 on:
   push:
@@ -40,12 +43,14 @@ jobs:
       - run: npm ci
       - name: Fetch the family repositories
         run: sh scripts/vendor.sh
+        env:
+          GAM_VENDOR_TOKEN: ${{ secrets.GAM_VENDOR_TOKEN }}
       - run: npm test
       - run: npm run build
       - name: Record what was built
         run: |
           echo "## Built from" >> "$GITHUB_STEP_SUMMARY"
-          sh scripts/vendor.sh | sed 's/^/- /' >> "$GITHUB_STEP_SUMMARY"
+          for f in pequod glauca try-works ambergris; do echo "- $f $(git -C vendor/$f rev-parse --short HEAD)"; done >> "$GITHUB_STEP_SUMMARY"
           if [ -n "${{ github.event.client_payload.repository }}" ]; then
             echo "- triggered by ${{ github.event.client_payload.repository }}@${{ github.event.client_payload.sha }}" >> "$GITHUB_STEP_SUMMARY"
           fi
@@ -60,6 +65,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch the family repositories
         run: sh scripts/vendor.sh
+        env:
+          GAM_VENDOR_TOKEN: ${{ secrets.GAM_VENDOR_TOKEN }}
       - uses: docker/setup-qemu-action@v3
       - uses: docker/setup-buildx-action@v3
       - name: Log in to ghcr.io

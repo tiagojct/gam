@@ -101,12 +101,16 @@ release of this repository.
 
 ### Secrets
 
-None in this repository; `GITHUB_TOKEN` pushes the image. Each family
-repository needs one secret:
+`GITHUB_TOKEN` pushes the image. Two named secrets, neither for SSH:
 
 | Secret | Where | Value |
 |---|---|---|
+| `GAM_VENDOR_TOKEN` | this repository | a fine-grained personal access token with Contents: read on glauca, try-works and ambergris, which are private at the time of writing; remove it once they are public |
 | `GAM_DISPATCH_TOKEN` | pequod, glauca, try-works, ambergris | a fine-grained personal access token for `tiagojct/gam` with Contents: read and write |
+
+Locally, `GAM_VENDOR_TOKEN=... npm run vendor` does the same; without it
+the script clones anonymously, which works for public repositories or
+when your git credentials already cover the private ones.
 
 ### Manual steps
 
@@ -124,8 +128,10 @@ repository needs one secret:
 4. **Certificate.** Nothing to do. Cloudflare terminates TLS at the edge
    and cloudflared connects to Caddy's self-signed listener on 8443, which
    the snippet already declares.
-5. **Secrets.** Add `GAM_DISPATCH_TOKEN` to each family repository, and the
-   job from `deploy/family-dispatch.yml` to its workflow.
+5. **Secrets.** Add `GAM_VENDOR_TOKEN` to this repository (Settings,
+   Secrets and variables, Actions) while any family is private; add
+   `GAM_DISPATCH_TOKEN` to each family repository, and the job from
+   `deploy/family-dispatch.yml` to its workflow.
 6. **First deploy.** Create the repository `tiagojct/gam` on GitHub and
    push `main`; the workflow publishes the image (the package must be
    public: GitHub, Packages, gam, change visibility). On the VPS:

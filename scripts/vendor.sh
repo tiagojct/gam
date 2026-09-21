@@ -6,9 +6,20 @@
 #   sh scripts/vendor.sh pequod=619982d  # pin one or more to a commit
 #
 # Pins are name=ref pairs; unpinned families follow their default branch.
+#
+# Private families: set GAM_VENDOR_TOKEN to a token that can read them (in
+# CI, the repository secret of that name). Public ones need nothing.
 set -eu
 cd "$(dirname "$0")/.."
 mkdir -p vendor
+
+remote() {
+  if [ -n "${GAM_VENDOR_TOKEN:-}" ]; then
+    printf 'https://x-access-token:%s@github.com/tiagojct/%s' "$GAM_VENDOR_TOKEN" "$1"
+  else
+    printf 'https://github.com/tiagojct/%s' "$1"
+  fi
+}
 
 for fam in pequod glauca try-works ambergris; do
   ref=""
@@ -19,8 +30,9 @@ for fam in pequod glauca try-works ambergris; do
   done
   dir="vendor/$fam"
   if [ ! -d "$dir/.git" ]; then
-    git clone --quiet --depth 1 "https://github.com/tiagojct/$fam" "$dir"
+    git clone --quiet --depth 1 "$(remote "$fam")" "$dir"
   else
+    git -C "$dir" remote set-url origin "$(remote "$fam")"
     git -C "$dir" fetch --quiet --depth 1 origin
     git -C "$dir" checkout --quiet --force FETCH_HEAD
   fi
