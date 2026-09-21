@@ -391,3 +391,6 @@ noscript .callout { max-width: none; }
 .dot .chip { width: 1.1rem; height: 1.1rem; border-radius: 50%; background: var(--sw); border: 1px solid var(--border); }
 .dot:hover { border-color: var(--border); filter: none; }
 .dot.copied { border-color: var(--accent); }
+
+.changelog h2 { font-size: 1.15rem; margin-top: 1.5rem; }
+.changelog ul { padding-left: 1.2rem; }

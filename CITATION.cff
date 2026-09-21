@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use Gam or the families it presents, please cite them."
+title: "Gam: where the four Moby-Dick colour families meet"
+authors:
+  - family-names: Jacinto
+    given-names: Tiago
+version: 0.1.0
+date-released: 2026-09-21
+license: "MIT AND CC-BY-4.0"
+repository-code: "https://github.com/tiagojct/gam"
+url: "https://gam.tiagojacinto.eu"
+keywords:
+  - colour palettes
+  - design tokens
+  - accessibility
+  - Moby-Dick
