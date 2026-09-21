@@ -1,0 +1,13 @@
+# Append to /opt/vps/caddy/Caddyfile, then:
+#   docker exec caddy caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile
+# ===== gam.tiagojacinto.eu (proxy -> gam:80) =====
+(route_gam) {
+	reverse_proxy gam:80
+}
+http://gam.tiagojacinto.eu {
+	import route_gam
+}
+https://gam.tiagojacinto.eu {
+	tls /data/certs/selfsigned.crt /data/certs/selfsigned.key
+	import route_gam
+}

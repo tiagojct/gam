@@ -1,0 +1,11 @@
+.git
+.github
+.claude
+node_modules
+dist
+site
+test
+tools/fonts/src
+*.md
+!CHANGELOG.md
+.DS_Store

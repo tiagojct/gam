@@ -1,0 +1,78 @@
+---
+title: "Gam"
+subtitle: "Where the four Moby-Dick colour families meet"
+description: "A static site that presents Pequod, Glauca, Try-Works and Ambergris side by side, shows each in use, and exports any of them to the formats people actually use, in the browser."
+categories: [tools, design]
+author:
+  - name: Tiago Jacinto
+    affiliation: MEDCIDS, Faculty of Medicine, University of Porto
+date: 2026-09-21
+citation:
+  type: software
+  url: https://tiagojacinto.eu/projects/gam/
+---
+
+In chapter 53 of *Moby-Dick* a gam is the meeting of two or more whaling ships at sea, where the crews cross over in boats and exchange news. Four colour families, each named from the book, each in its own repository, needed a place to meet. Gam is that place: one site that reads their canonical token files at build time, sets them beside each other, and turns any of them into the format you need.
+
+Use it at [gam.tiagojacinto.eu](https://gam.tiagojacinto.eu). Static files only: no analytics, no cookies, nothing sent anywhere.
+
+## What it does
+
+- **Presents the families side by side.** One page per family with its base scale and accents as swatches (click to copy), the roles the family assigns, prose and code samples in dark and light, contrast tables computed at build time against WCAG 2.x, the family's own colour-vision notes, and install instructions quoted from its README for only the targets it ships.
+
+- **Compares them.** The same passage, the same code and the same small chart in all four families at once, with one switch for dark and light, and the four base scales aligned on a common lightness axis so a step in one can be read against its neighbours in the others.
+
+- **Restyles itself.** The site chrome takes the family and mode you pick and remembers them; by default it is Pequod, following the system colour scheme. Every text pair the chrome uses is tested at 4.5:1 in all eight combinations, and the build fails if a family's tokens ever drop one below that.
+
+- **Never types a hex.** Every colour is read from `pequod.json`, `glauca.json`, `try-works.json` or `tokens.json` through one adapter per family, and each carries its origin. A test walks the model and refuses anything it cannot trace.
+
+## The four families
+
+Each has a dark and a light variant, and its own temperament:
+
+| Family | Dark | Light | Repository |
+|---|---|---|---|
+| Pequod | Below deck | Parchment | [pequod](https://github.com/tiagojct/pequod) |
+| Glauca | Profundum | Pruina | [glauca](https://github.com/tiagojct/glauca) |
+| Try-Works | Try-Fire | True Lamp | [try-works](https://github.com/tiagojct/try-works) |
+| Ambergris | Dark | Light | [ambergris](https://github.com/tiagojct/ambergris) |
+
+Pequod is a reading and code palette with a twelve-step Log scale and eight accents named for the crew. Try-Works and Glauca are full design systems built on the same machinery, one dark-first with the fire as its single hot mark, one light-first with a sky-blue on a frost field. Ambergris is near-monochrome: a cool grey ramp, one teal kept for interaction, and a hue sweep reserved for data. They are used together in [Loomings](https://tiagojacinto.eu/projects/loomings/); Gam is where they are presented and exported.
+
+## The Carpenter
+
+The export tool is named for chapter 107, the ship's carpenter who makes whatever is asked of him from whatever reaches his bench. Pick a family, a mode (dark, light or both) and a namespace, choose and order the accents to use as series colours, and every format is generated in the browser with a live preview, a copy button and a download:
+
+- Web: CSS custom properties, SCSS, Tailwind v3 and v4, W3C Design Tokens, Tokens Studio for Figma.
+- Publishing: Quarto `_brand.yml` and SCSS theme, Typst, LaTeX xcolor, Pandoc HTML CSS.
+- Data: ggplot2 scales, matplotlib style and colormaps, Observable Plot and D3 schemes.
+- Editors and terminals: VS Code, Zed, Neovim, Obsidian, Ghostty, Alacritty, kitty, WezTerm, tmux, Windows Terminal, iTerm2.
+- Palette files: GIMP and Inkscape, Adobe ASE, a plain hex list. And a zip of everything.
+
+Where a family already ships a file for a target, that file is offered verbatim and labelled official. An "order for colour-vision distance" button reorders the chosen accents to keep them apart under protan, deutan and tritan simulation (Viénot, Brettel and Mollon, as in Pequod's own check) and reports the worst pair. A contrast checker takes any two tokens from any family and shows the WCAG ratio and the pair under the three simulations.
+
+## Version
+
+Current: 0.1.0 (21 September 2026). The full history is in the repository's changelog.
+
+- 0.1.0 (2026-09-21) — First release: the four family pages, Compare, the Carpenter with twenty-eight export formats, About; build-time contrast tables and colour-vision notes; deployment on the VPS with rebuilds triggered from the family repositories.
+
+## Built with
+
+Vite and Vitest, plain HTML rendered from the token files, fflate for the zip, resvg for the share image, Atkinson Hyperlegible Next and JetBrains Mono as self-hosted subsets. Served as static files by nginx behind Caddy and a Cloudflare Tunnel. Code MIT, text CC BY 4.0; the families' tokens stay under their own licences.
+
+- [Source on GitHub](https://github.com/tiagojct/gam)
+- [Changelog](https://github.com/tiagojct/gam/blob/main/CHANGELOG.md)
+
+## Citation
+
+```bibtex
+@software{jacinto_gam_2026,
+  author  = {Jacinto, Tiago},
+  title   = {Gam: where the four Moby-Dick colour families meet},
+  year    = {2026},
+  version = {0.1.0},
+  url     = {https://gam.tiagojacinto.eu},
+  note    = {Presents Pequod, Glauca, Try-Works and Ambergris}
+}
+```

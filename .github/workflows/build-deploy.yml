@@ -1,0 +1,91 @@
+name: Build and deploy
+
+# Builds the site from the current family repositories, runs the tests,
+# and pushes the nginx image to ghcr.io/tiagojct/gam. The VPS runs
+# :latest under watchtower, so a push of :latest is the deployment.
+#
+# :latest moves on pushes to main, on repository_dispatch from a family
+# repository (event family-updated), on the weekly schedule and on manual
+# runs. Version tags (v*) also publish semver tags.
+#
+# No secrets are needed here: GITHUB_TOKEN pushes the image. The family
+# repositories hold GAM_DISPATCH_TOKEN to trigger this workflow.
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  repository_dispatch:
+    types: [family-updated]
+  schedule:
+    - cron: "17 4 * * 1"   # Mondays 04:17 UTC, in case a dispatch was missed
+  workflow_dispatch:
+
+concurrency:
+  group: build-deploy
+  cancel-in-progress: false
+
+env:
+  IMAGE: ghcr.io/${{ github.repository }}
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Fetch the family repositories
+        run: sh scripts/vendor.sh
+      - run: npm test
+      - run: npm run build
+      - name: Record what was built
+        run: |
+          echo "## Built from" >> "$GITHUB_STEP_SUMMARY"
+          sh scripts/vendor.sh | sed 's/^/- /' >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "${{ github.event.client_payload.repository }}" ]; then
+            echo "- triggered by ${{ github.event.client_payload.repository }}@${{ github.event.client_payload.sha }}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  publish:
+    needs: build-check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the family repositories
+        run: sh scripts/vendor.sh
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - name: Log in to ghcr.io
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Image tags and labels
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest
+            type=sha,format=short
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: deploy/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max,ignore-error=true

@@ -1,0 +1,5 @@
+# Add under `ingress:` in /etc/cloudflared/config.yml, before the final
+# `- service: http_status:404` rule (write the whole file back; do not
+# append), then restart cloudflared.
+  - hostname: gam.tiagojacinto.eu
+    service: https://localhost:8443

@@ -1,0 +1,17 @@
+# Add this job to the main workflow of each family repository (pequod,
+# glauca, try-works, ambergris). It asks gam.tiagojacinto.eu to rebuild
+# after a successful push to main. Needs one repository secret in the
+# family repository: GAM_DISPATCH_TOKEN, a fine-grained personal access
+# token scoped to tiagojct/gam with Contents: read and write.
+  notify-gam:
+    needs: [test]            # or whatever the family's build job is called
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ask Gam to rebuild
+        run: |
+          curl --silent --show-error --fail-with-body -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GAM_DISPATCH_TOKEN }}" \
+            https://api.github.com/repos/tiagojct/gam/dispatches \
+            -d '{"event_type":"family-updated","client_payload":{"repository":"${{ github.repository }}","sha":"${{ github.sha }}"}}'
