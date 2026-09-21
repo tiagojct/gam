@@ -103,6 +103,7 @@ h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 0 0 0.5rem; }
 h2 { font-size: clamp(1.35rem, 2.6vw, 1.75rem); margin: 2.5rem 0 0.75rem; }
 h3 { font-size: 1.15rem; margin: 1.75rem 0 0.5rem; }
 p, ul, ol, dl { max-width: var(--measure); }
+p, li, dd, td { overflow-wrap: anywhere; }
 p { margin: 0 0 1rem; }
 .lede { font-size: 1.15rem; color: var(--text-muted); max-width: var(--measure); }
 small, .muted { color: var(--text-muted); }
@@ -120,6 +121,7 @@ pre {
 }
 pre code { font-size: 0.875rem; }
 :not(pre) > code {
+  overflow-wrap: anywhere;
   background: var(--surface);
   border-radius: 3px;
   padding: 0.05em 0.3em;
@@ -129,7 +131,7 @@ table { border-collapse: collapse; width: 100%; max-width: 100%; font-size: 0.95
 th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { font-weight: 700; color: var(--text); }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
-.table-scroll { overflow-x: auto; max-width: 100%; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; max-width: 100%; margin-bottom: 1rem; position: relative; }
 
 /* Header */
 .site-header {
@@ -223,6 +225,7 @@ main { flex: 1; padding-block: 2rem 3rem; }
 /* Cards */
 .cards { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); margin: 1.5rem 0; padding: 0; list-style: none; max-width: none; }
 .card {
+  min-width: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem 1.15rem 1.15rem;
@@ -286,6 +289,7 @@ main { flex: 1; padding-block: 2rem 3rem; }
 /* Samples: a scoped family and mode; every colour inside comes from the
    scope's variables. */
 .sample {
+  min-width: 0;
   background: var(--bg);
   color: var(--text);
   border: 1px solid var(--border);
@@ -352,6 +356,7 @@ main { flex: 1; padding-block: 2rem 3rem; }
 .pair-preview { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; background: var(--sw); font-size: 0.85rem; white-space: nowrap; border: 1px solid var(--border); }
 .pair-preview .pair-fg { color: var(--sw); }
 
+.two-col > *, .sample-grid > *, .for-dark > *, .for-light > * { min-width: 0; }
 .two-col { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
 .install-section h3 { margin-top: 1.25rem; }
 .install-section pre { font-size: 0.85rem; }

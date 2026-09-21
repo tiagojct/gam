@@ -1,6 +1,7 @@
 import { html, raw } from '../site/html.js';
 import { swatchGrid, sampleBlock, sampleSet, contrastRow, inlineMarkdown } from '../site/components.js';
 import { MODES } from '../model/token.js';
+import { GENERATORS, GROUPS, officialFor } from '../generators/index.js';
 
 /** base token id -> list of "mode role" strings that point at it. */
 function roleIndex(fam) {
@@ -128,7 +129,18 @@ ${fam.cvd ? html`<p>${fam.cvd.summary}</p><p>Source: <a href="${fam.cvd.href}">$
 <p>Only the targets this repository ships, with the commands copied from its README.</p>
 ${installSections(fam)}
 ${fam.also && fam.also.length ? html`<p>The repository also ships: ${fam.also.join(', ')}. See the <a href="${fam.repo}">repository</a>.</p>` : ''}
-<p>Every other format is generated in the <a href="/carpenter/?family=${id}">Carpenter</a>.</p>
+<h3>Every format, official or generated</h3>
+<p>What the <a href="/carpenter/?family=${id}">Carpenter</a> offers for ${fam.name}: a file the repository ships, or one generated here from the tokens. File names are those the generators produce for both modes.</p>
+<div class="table-scroll"><table class="formats">
+<thead><tr><th>Group</th><th>Format</th><th>Source</th><th>Files</th></tr></thead>
+<tbody>
+${GROUPS.flatMap((g) => GENERATORS.filter((x) => x.group === g.id).map((gen) => {
+  const official = officialFor(fam, gen.id, 'both');
+  const files = gen.generate(fam, { mode: 'both' });
+  return html`<tr><td>${g.label}</td><td>${gen.label}</td><td>${official.length ? html`<span class="badge official">official</span> ${official.map((o, i) => html`${i ? ', ' : ''}<a href="${fam.repo}/blob/main/${o.path}"><code>${o.name}</code></a>`)}` : html`<span class="badge">generated</span>`}</td><td><code>${files.map((f) => f.name).join(', ')}</code></td></tr>`;
+}))}
+</tbody>
+</table></div>
 
 <h2 id="links">Links</h2>
 <ul>
