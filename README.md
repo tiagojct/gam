@@ -1,3 +1,5 @@
+This repository is archived. Gam is now the Ensigns site at https://ensigns.tiagojacinto.eu, and gam.tiagojacinto.eu redirects there. The code and the colour families are in https://github.com/tiagojct/ensigns.
+
 # Gam
 
 Where the four Moby-Dick colour families meet. A static site at
